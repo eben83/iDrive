@@ -1,6 +1,8 @@
 {
   "name": "idrive",
   "version": "1.0.0",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
+    "reactstrap": "^8.9.0"
   }
 }
