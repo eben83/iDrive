@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { UncontrolledCarousel, Row, Col } from 'reactstrap'
+import ImageSlider from "../components/imageSlider";
 
 export default function Home() {
   return (
@@ -10,8 +10,26 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className=''>
-        <h1>iDrive</h1>
+      <div className='text-purple-600'>
+          <h1 className='text-3xl text-center pb-12'>Carousel</h1>
+          <div className='text-center pb-12'>
+              <h1 className='text-3xl'>Specialising in</h1>
+              <p className='text-l'>Motion Control Systems & Factory Automation</p>
+          </div>
+          <div className='pb-8'>
+              <h1 className='text-3xl text-center pb-7'>We are suppliers of:</h1>
+              <div className="flex items-center justify-center w-full">
+                  <div className='w-3/12 flex flex-wrap justify-center'>
+                      <p>Invertek Product Range of Motion Control Equipment</p>
+                      <p>AC & DC Electric Motors</p>
+                      <p> Geared Motors</p>
+                      <p>Electric MCC’s Engineered to Customer Specifications</p>
+                  </div>
+              </div>
+          </div>
+          <div className='w-full bg-purple-600 h-32'>
+              <img src='' alt='image'/>
+          </div>
       </div>
     </div>
   )
