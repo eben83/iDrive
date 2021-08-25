@@ -1,6 +1,9 @@
 {
   "name": "idrive",
   "version": "1.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "react-slick": "^0.28.1",
+    "slick-carousel": "^1.8.1"
+  },
   "devDependencies": {}
 }
