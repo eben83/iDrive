@@ -1,5 +1,7 @@
 import Head from 'next/head'
 import ImageSlider from "../components/imageSlider";
+import ContactUsForm from "../components/ContactUsForm";
+import Footer from '../components/footer'
 
 export default function Home() {
   return (
@@ -10,7 +12,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className='text-purple-600'>
+      <div className='text-purple-600 overflow-x-hidden'>
           <ImageSlider />
           <div className='text-center pb-12'>
               <h1 className='text-3xl'>Specialising in</h1>
@@ -56,7 +58,7 @@ export default function Home() {
               </div>
               <div className='w-1/3 m-6'>
                   <div className='flex justify-center align-center p-9'>
-                      <img src='./images/iso-9001.png' alt='image' className='p-6'/>
+                      <img src='./images/iso-9001.png' alt='image' className='p-6 object-contain'/>
                       <img src='./images/logo-dnv.jpg' alt='image' className='p-6'/>
                   </div>
                   <div className='h1 text-center'>
@@ -81,7 +83,21 @@ export default function Home() {
                   <img src='./images/various combined.png' alt='image' className='w-11/12 absolute top-24'/>
               </div>
           </div>
-          <div className='relative  w-full bg-purple-600 h-4 z-50' />
+          <div className='relative w-full bg-purple-600 h-4 z-50' />
+          <div className='mt-32 mb-32'>
+              <div className='text-center'>
+                  <h1 className='text-2xl'>Contact us</h1>
+                  <p className='text-gray-400'>
+                      Please fill in the form below for any enquiries
+                  </p>
+                  <p className='text-gray-400'>
+                      or give as a call on one of the numbers below.
+                  </p>
+              </div>
+              <ContactUsForm />
+          </div>
+          <div className='relative w-full bg-gray-400 h-2 z-50' />
+          <Footer />
       </div>
     </div>
   )
