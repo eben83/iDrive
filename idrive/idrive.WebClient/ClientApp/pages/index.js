@@ -12,7 +12,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className='text-purple-600 overflow-x-hidden'>
+      <div className='text-indigo-500 overflow-x-hidden'>
           <ImageSlider />
           <div className='text-center pb-12'>
               <h1 className='text-3xl'>Specialising in</h1>
@@ -29,7 +29,7 @@ export default function Home() {
                   </div>
               </div>
           </div>
-          <div className='w-full bg-purple-600 h-32 flex justify-evenly items-center'>
+          <div className='w-full bg-indigo-500 h-32 flex justify-evenly items-center'>
               <img src='../images/85-odp2s-in v105 optidrive p2 solar pump brochure-u1609-fr.png' className='w-64' />
               <img src='../images/optidrive-e3-208x60-white-u1594-fr.png' className='w-40' />
               <img src='../images/optidrive-eco-84x45-white.png' className='w-32' />
@@ -83,7 +83,7 @@ export default function Home() {
                   <img src='./images/various combined.png' alt='image' className='w-11/12 absolute top-24'/>
               </div>
           </div>
-          <div className='relative w-full bg-purple-600 h-4 z-50' />
+          <div className='relative w-full bg-indigo-500 h-4 z-50' />
           <div className='mt-32 mb-32'>
               <div className='text-center'>
                   <h1 className='text-2xl'>Contact us</h1>
