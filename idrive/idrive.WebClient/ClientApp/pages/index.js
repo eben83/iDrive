@@ -11,7 +11,7 @@ export default function Home() {
       </Head>
 
       <div className='text-purple-600'>
-          <h1 className='text-3xl text-center pb-12'>Carousel</h1>
+          <ImageSlider />
           <div className='text-center pb-12'>
               <h1 className='text-3xl'>Specialising in</h1>
               <p className='text-l'>Motion Control Systems & Factory Automation</p>
@@ -19,7 +19,7 @@ export default function Home() {
           <div className='pb-8'>
               <h1 className='text-3xl text-center pb-7'>We are suppliers of:</h1>
               <div className="flex items-center justify-center w-full">
-                  <div className='w-3/12 flex flex-wrap justify-center'>
+                  <div className='w-4/12 flex flex-wrap justify-center'>
                       <p>Invertek Product Range of Motion Control Equipment</p>
                       <p>AC & DC Electric Motors</p>
                       <p> Geared Motors</p>
@@ -27,8 +27,12 @@ export default function Home() {
                   </div>
               </div>
           </div>
-          <div className='w-full bg-purple-600 h-32'>
-              <img src='' alt='image'/>
+          <div className='w-full bg-purple-600 h-32 flex justify-evenly items-center'>
+              <img src='../images/85-odp2s-in v105 optidrive p2 solar pump brochure-u1609-fr.png' className='w-64' />
+              <img src='../images/optidrive-e3-208x60-white-u1594-fr.png' className='w-40' />
+              <img src='../images/optidrive-eco-84x45-white.png' className='w-32' />
+              <img src='../images/optidrive-elevator-332x60-white-u1603-fr.png' className='w-64' />
+              <img src='../images/optidrive-p2-219x60-white-u1612-fr.png' className='w-40' />
           </div>
       </div>
     </div>
