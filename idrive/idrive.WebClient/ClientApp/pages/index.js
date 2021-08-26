@@ -38,7 +38,7 @@ export default function Home() {
               <img src='../images/optidrive-elevator-332x60-white-u1603-fr.png' className='w-64' />
               <img src='../images/optidrive-p2-219x60-white-u1612-fr.png' className='w-40' />
           </div>
-          <div className='flex flex-col w-full justify-center md:flex-row md:h-auto'>
+          <div className='flex flex-col w-full justify-center md:flex-row md:h-auto' id='about'>
               <div className='md:w-1/2 md:m-6'>
                   <div className='md:relative md:w-full'>
                       <div className='p-5 md:absolute md:right-0' >
@@ -85,7 +85,7 @@ export default function Home() {
                   <img src='./images/various combined.png' alt='image' className='w-9/12 absolute top-24 left-10 right-10 md:top-12'/>
               </div>
           </div>
-          <div className='relative w-full bg-indigo-500 h-4 z-50' />
+          <div className='relative w-full bg-indigo-500 h-4 z-40' />
           <div className='mt-32 mb-32'>
               <div className='text-center'>
                   <h1 className='text-2xl'>Contact us</h1>
