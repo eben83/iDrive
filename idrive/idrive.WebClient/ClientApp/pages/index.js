@@ -2,6 +2,7 @@ import Head from 'next/head'
 import ImageSlider from "../components/imageSlider";
 import ContactUsForm from "../components/ContactUsForm";
 import Footer from '../components/footer'
+import Nav from '../components/nav'
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       </Head>
 
       <div className='text-indigo-500 overflow-x-hidden'>
+          <Nav />
           <ImageSlider />
           <div className='text-center pb-12 pt-12 md:pt-0'>
               <h1 className='text-3xl'>Specialising in</h1>
@@ -61,7 +63,7 @@ export default function Home() {
                       <img src='./images/iso-9001.png' alt='image' className='p-6 object-contain'/>
                       <img src='./images/logo-dnv.jpg' alt='image' className='p-6'/>
                   </div>
-                  <div className='h1 text-center p-5 md:p-0 xl:p-12'>
+                  <div className='h1 text-center text-xl p-5 md:p-0 xl:p-12'>
                       Invertek’s products are designed and manufactured in the UK to the quality and environmental 
                       management system principals of ISO9001 and ISO14001.
                   </div>

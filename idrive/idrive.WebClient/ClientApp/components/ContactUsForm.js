@@ -169,7 +169,7 @@ const ContactUsForm = (props) => {
     }
 
     return (
-        <div className=''>
+        <div className='' id='contact'>
             <form className="" onSubmit={submitHandler} noValidate>
                 <div className='flex justify-center pt-12 '>
                     <div className='w-11/12'>
