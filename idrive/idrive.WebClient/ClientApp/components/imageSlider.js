@@ -31,7 +31,7 @@ const ImageSlider = (props) => {
     );
 }
 const Carousel = styled(Slider)`
-    
+    margin-top: 5rem;
     & > button {
         opacity: 0;
         height: 100%;
