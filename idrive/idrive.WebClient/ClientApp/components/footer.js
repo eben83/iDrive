@@ -6,8 +6,8 @@ const Footer = (props) => {
     return (
         <>
             <footer>
-                <div className='flex w-full justify-center items-center h-52 bg-indigo-500'>
-                    <div className='w-2/3 h-auto flex justify-evenly items-center h-auto' >
+                <div className='flex w-full justify-center items-center h-auto py-12 md:pt-0 md:h-52 bg-indigo-500'>
+                    <div className='h-auto flex flex-col md:flex-row justify-evenly items-center h-auto' >
                         <a href='https://www.invertekdrives.com/'>
                             <img src='./images/Invertek-Official-Partner-Logo5954.jpg' alt='image' className='w-40'/>
                         </a>
@@ -22,7 +22,7 @@ const Footer = (props) => {
                                 <FontAwesomeIcon icon={faInstagram} className='text-white h-24 w-12 pl-1'/>
                             </a>
                         </div>
-                        <div className='text-white text-xs' >
+                        <div className='text-white text-xs md:pr-8' >
                             <p>
                                 011 894 7532
                             </p>
@@ -39,7 +39,7 @@ const Footer = (props) => {
                                 www.idrivesa.co.za
                             </p>
                         </div>
-                        <div className='text-white text-xs' >
+                        <div className='text-white text-xs pt-5 md:pt-0' >
                             <p>
                                 Unit 15, N12 Industrial Park
                             </p>
