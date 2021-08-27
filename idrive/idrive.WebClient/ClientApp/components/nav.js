@@ -69,7 +69,7 @@ const Nav = (props) => {
     }
 
     const products = [
-        {id: '1', title: 'Optidrive E3', path: '/'},
+        {id: '1', title: 'Optidrive E3', path: '/optidrive-e3'},
         {id: '2', title: 'Optidrive P2', path: '/'},
         {id: '3', title: 'Optidrive Eco Pump', path: '/'},
         {id: '4', title: 'Optidrive Eco', path: '/'},
@@ -89,7 +89,7 @@ const Nav = (props) => {
     
     return (
         <>
-            <div className="fixed top-0 z-50 flex p-5 bg-white border-b-2 border-black md:items-center">
+            <div className="fixed top-0 z-50 flex p-5 bg-white shadow md:items-center">
                 <NavbarBrand href='/' className='w-1/2 md:w-1/3 lg:w-1/5'>
                     <img src='../images/I-Drive-South-Africa-Logoc3a6.jpg' alt='company logo'  />
                 </NavbarBrand>
