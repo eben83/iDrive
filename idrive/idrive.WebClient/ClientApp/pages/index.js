@@ -98,7 +98,7 @@ export default function Home() {
               </div>
               <ContactUsForm />
           </div>
-          <div className='relative w-full bg-gray-400 h-2 z-40' />
+          
           <Footer />
       </div>
     </div>
