@@ -1,21 +1,91 @@
 ﻿import React, {useState} from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faBars} from "@fortawesome/free-solid-svg-icons";
+import {faBars, faCaretDown, faCaretUp, faTimes} from "@fortawesome/free-solid-svg-icons";
 import {useRouter} from "next/router";
 import NavLink from "./NavLink";
-import { NavbarBrand} from 'reactstrap';
+import { NavbarBrand } from 'reactstrap';
 
 const Nav = (props) => {
 
     const router = useRouter();
-
     const [isOpen, setIsOpen] = useState(false);
-    const [isProductOpen, setIsProductOpen] = useState(false)
-    const [isSectorOpen, setIsSectorOpen] = useState(false)
+    const [productDropdown, setProductDropdown] = useState(false)
+    const [sectorDropdown, setSectorDropdown] = useState(false)
 
     const toggleNav = () => {
         setIsOpen((state) => !state)
     };
+    
+    const mobileClose = () => {
+        setIsOpen(false)
+    }
+    const handleProduct = () => {
+        if(sectorDropdown) {
+            setSectorDropdown(false)
+            setProductDropdown(!productDropdown)
+        } else {
+            setProductDropdown(!productDropdown)
+        }
+    }
+    const handleSector = () => {
+        if(productDropdown) {
+            setProductDropdown(false)
+            setSectorDropdown(!sectorDropdown)
+        } else {
+            setSectorDropdown(!sectorDropdown)
+        }
+    }
+    
+    const onMouseEnterProduct = () => {
+        if(window.innerWidth < 960) {
+            setProductDropdown(false)
+        } else {
+            setProductDropdown(true)
+        }
+    }
+
+    const onMouseLeaveProduct = () => {
+        if(window.innerWidth < 960) {
+            setProductDropdown(false)
+        } else {
+            setProductDropdown(false)
+        }
+    }
+
+    const onMouseEnterSector = () => {
+        if(window.innerWidth < 960) {
+            setSectorDropdown(false)
+        } else {
+            setSectorDropdown(true)
+        }
+    }
+
+    const onMouseLeaveSector = () => {
+        if(window.innerWidth < 960) {
+            setSectorDropdown(false)
+        } else {
+            setSectorDropdown(false)
+        }
+    }
+
+    const products = [
+        {id: '1', title: 'Optidrive E3', path: '/'},
+        {id: '2', title: 'Optidrive P2', path: '/'},
+        {id: '3', title: 'Optidrive Eco Pump', path: '/'},
+        {id: '4', title: 'Optidrive Eco', path: '/'},
+        {id: '5', title: 'Optidrive Elevator', path: '/'},
+        {id: '6', title: 'Optidrive P2 Solar', path: '/'},
+    ]
+    
+    const sectors = [
+        {id: '1', title: 'Pump Control', path: '/'},
+        {id: '2', title: 'Building Services', path: '/'},
+        {id: '3', title: 'Elevators', path: '/'},
+        {id: '4', title: 'General Automation', path: '/'},
+        {id: '5', title: 'Marine Equipment Control', path: '/'},
+        {id: '6', title: 'Combustion Air Fan Control', path: '/'},
+        {id: '7', title: 'Solar', path: '/'},
+    ]
     
     return (
         <>
@@ -24,135 +94,82 @@ const Nav = (props) => {
                     <img src='../images/I-Drive-South-Africa-Logoc3a6.jpg' alt='company logo'  />
                 </NavbarBrand>
                 <button className="md:hidden" onClick={toggleNav}>
-                    <FontAwesomeIcon icon={faBars} className='h-7 w-7 text-indigo-500 absolute right-3 top-5'/>
+                    <FontAwesomeIcon icon={isOpen ? faTimes : faBars} className='h-7 w-7 text-indigo-500 absolute right-3 top-5'/>
                 </button>
-                <nav className={`${isOpen ? 'flex' : 'hidden'} text-white bg-indigo-500 h-screen md:h-auto md:pb-0 md:bg-white md:text-indigo-500 pl-5 absolute md:pl-0  md:relative top-24 left-0 md:top-0 z-100 flex-col md:flex md:flex-row md:justify-evenly w-full `}>
+                <nav className={`${isOpen ? 'flex' : 'hidden'} z-100 text-white bg-indigo-500 h-screen md:h-auto md:pb-0 md:bg-white md:text-indigo-500 pl-5 absolute md:pl-0  md:relative top-24 left-0 md:top-0 z-100 flex-col md:flex md:flex-row md:justify-evenly w-full `}>
 
                     <NavLink href={"/"}
                              isActive={router.pathname === "/"}
                              text={"Home"}
                              className='py-4 px-0'
                              activeClass={"text-black underline"}
-                             hoverClass={"hover:text-blue-500"}/>
+                             hoverClass={"hover:text-blue-500"}
+                             onclick={mobileClose}
+                    />
                     
-                    <div className='relative'>
-                        <div onClick={() => setIsProductOpen(!isProductOpen)} className='cursor-pointer py-4 px-0 hover:text-blue-500'>
+                    <ul >
+                        <li onClick={handleProduct} className='nav-item flex py-4 px-0 cursor-pointer relative z-40' onMouseEnter={onMouseEnterProduct} onMouseLeave={onMouseLeaveProduct}>
                             Products
-                        </div>
-                        <ul className={`${isProductOpen ? 'visible' : 'invisible'} z-10 absolute top-12 bg-indigo-500 md:border-black md:border-2 md:bg-white md:w-40 md:px-5 md:pb-5 left-0 flex flex-col `}>
-                            <NavLink href={"/"}
-                                     isActive={router.pathname === "/"}
-                                     text={"Optidrive E3"}
-                                     className='py-1 px-0'
-                                     activeClass={"text-black underline"}
-                                     hoverClass={"hover:text-blue-500"}/>
+                            <FontAwesomeIcon icon={productDropdown ? faCaretUp : faCaretDown} className='h-7 w-7 sm:text-white md:text-indigo-500 '/>
+                            <ul  className={`${productDropdown ? 'visible' : 'invisible'} absolute top-12 bg-indigo-500 md:w-40 flex flex-col items-center md:bg-indigo-100 md:text-indigo-500`}>
+                                {products .map((item, index) => {
+                                    return (
+                                        <li key={index}>
+                                            <NavLink href={item.path}
+                                                     isActive={router.pathname === item.path}
+                                                     text={item.title}
+                                                     className='py-4 px-0'
+                                                     activeClass={"text-black underline"}
+                                                     hoverClass={"hover:text-blue-500"}
+                                                     onclick={mobileClose}
+                                            />
+                                        </li>
+                                    )
+                                })}
+                            </ul>
+                        </li>
+                    </ul>
 
-                            <NavLink href={"/"}
-                                     isActive={router.pathname === "/"}
-                                     text={"Optidrive P2"}
-                                     className='py-1 px-0'
-                                     activeClass={"text-black underline"}
-                                     hoverClass={"hover:text-blue-500"}/>
-
-                            <NavLink href={"/"}
-                                     isActive={router.pathname === "/"}
-                                     text={"Optidrive Eco Pump"}
-                                     className='py-1 px-0'
-                                     activeClass={"text-black underline"}
-                                     hoverClass={"hover:text-blue-500"}/>
-
-                            <NavLink href={"/"}
-                                     isActive={router.pathname === "/"}
-                                     text={"Optidrive Eco"}
-                                     className='py-1 px-0'
-                                     activeClass={"text-black underline"}
-                                     hoverClass={"hover:text-blue-500"}/>
-
-                            <NavLink href={"/"}
-                                     isActive={router.pathname === "/"}
-                                     text={"Optidrive Elevator"}
-                                     className='py-1 px-0'
-                                     activeClass={"text-black underline"}
-                                     hoverClass={"hover:text-blue-500"}/>
-
-                            <NavLink href={"/"}
-                                     isActive={router.pathname === "/"}
-                                     text={"Optidrive P2 Solar"}
-                                     className='py-1 px-0'
-                                     activeClass={"text-black underline"}
-                                     hoverClass={"hover:text-blue-500"}/>
-                        </ul>
-                    </div>
-
-                    <div className='relative'>
-                        <div onClick={() => setIsSectorOpen(!isSectorOpen)} className='cursor-pointer py-4 px-0 hover:text-blue-500'>
+                    <ul >
+                        <li onClick={handleSector} className='nav-item flex py-4 px-0 cursor-pointer relative' onMouseEnter={onMouseEnterSector} onMouseLeave={onMouseLeaveSector}>
                             Sectors
-                        </div>
-                        <ul className={`${isSectorOpen ? 'visible' : 'invisible'} absolute top-12 bg-indigo-500 md:border-black md:border-2 md:bg-white md:w-40 md:px-5 md:pb-5 left-0 flex flex-col `}>
-                            <NavLink href={"/"}
-                                     isActive={router.pathname === "/"}
-                                     text={"Pump Control"}
-                                     className='py-1 px-0'
-                                     activeClass={"text-black underline"}
-                                     hoverClass={"hover:text-blue-500"}/>
-
-                            <NavLink href={"/"}
-                                     isActive={router.pathname === "/"}
-                                     text={"Building Services"}
-                                     className='py-1 px-0'
-                                     activeClass={"text-black underline"}
-                                     hoverClass={"hover:text-blue-500"}/>
-
-                            <NavLink href={"/"}
-                                     isActive={router.pathname === "/"}
-                                     text={"Elevators"}
-                                     className='py-1 px-0'
-                                     activeClass={"text-black underline"}
-                                     hoverClass={"hover:text-blue-500"}/>
-
-                            <NavLink href={"/"}
-                                     isActive={router.pathname === "/"}
-                                     text={"General Automation"}
-                                     className='py-1 px-0'
-                                     activeClass={"text-black underline"}
-                                     hoverClass={"hover:text-blue-500"}/>
-
-                            <NavLink href={"/"}
-                                     isActive={router.pathname === "/"}
-                                     text={"Marin Equipment Control"}
-                                     className='py-1 px-0'
-                                     activeClass={"text-black underline"}
-                                     hoverClass={"hover:text-blue-500"}/>
-
-                            <NavLink href={"/"}
-                                     isActive={router.pathname === "/"}
-                                     text={"Combustion Air Fan Control"}
-                                     className='py-1 px-0'
-                                     activeClass={"text-black underline"}
-                                     hoverClass={"hover:text-blue-500"}/>
-
-                            <NavLink href={"/"}
-                                     isActive={router.pathname === "/"}
-                                     text={"Solar"}
-                                     className='py-1 px-0'
-                                     activeClass={"text-black underline"}
-                                     hoverClass={"hover:text-blue-500"}/>
-                        </ul>
-                    </div>
+                            <FontAwesomeIcon icon={sectorDropdown ? faCaretUp : faCaretDown} className='h-7 w-7 sm:text-white md:text-indigo-500 '/>
+                            <ul  className={`${sectorDropdown ? 'visible' : 'invisible'} absolute top-12 bg-indigo-500 md:w-64 flex flex-col items-center md:bg-indigo-100 md:text-indigo-500`}>
+                                {sectors .map((item, index) => {
+                                    return (
+                                        <li key={index}>
+                                            <NavLink href={item.path}
+                                                     isActive={router.pathname === item.path}
+                                                     text={item.title}
+                                                     className='py-4 px-0'
+                                                     activeClass={"text-black underline"}
+                                                     hoverClass={"hover:text-blue-500"}
+                                                     onclick={mobileClose}
+                                            />
+                                        </li>
+                                    )
+                                })}
+                            </ul>
+                        </li>
+                    </ul>
 
                     <NavLink href={"/#about"}
                              isActive={router.pathname === "#about"}
                              text={"About"}
                              className='py-4 px-0'
                              activeClass={"text-black underline"}
-                             hoverClass={"hover:text-blue-500"}/>
+                             hoverClass={"hover:text-blue-500"}
+                             onclick={mobileClose}
+                    />
 
                     <NavLink href={"/#contact"}
                              isActive={router.pathname === '#contact'}
                              text={"Contact us"}
                              className='py-4 px-0'
                              activeClass={"text-black underline"}
-                             hoverClass={"hover:text-blue-500"}/>
+                             hoverClass={"hover:text-blue-500"}
+                             onclick={mobileClose}
+                    />
 
                 </nav>
             </div>
