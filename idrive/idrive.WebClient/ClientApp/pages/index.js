@@ -3,6 +3,7 @@ import ImageSlider from "../components/imageSlider";
 import ContactUsForm from "../components/ContactUsForm";
 import Footer from '../components/footer'
 import Nav from '../components/nav'
+import ScrollToTop from "../components/ScrollToTop";
 
 export default function Home() {
   return (
@@ -100,6 +101,7 @@ export default function Home() {
           </div>
           
           <Footer />
+          <ScrollToTop />
       </div>
     </div>
   )
