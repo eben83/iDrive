@@ -9,7 +9,7 @@ const OptidriveE3 = (props) => {
             <Nav />
             <div className='mt-24 md:mt-32 px-5 md:flex lg:container lg:mx-auto xl:mt-40'>
                 <div className='md:w-1/2'>
-                    <img src='./images/optidrive e3ac95.png' alt='optidrive logo' />
+                    <img src='./images/optidrive e3ac95.png' alt='optidrive e3 logo' />
                     <div>
                         <h1 className='text-indigo-500 pt-5 font-bold'>
                             Compact, Reliable and Easy to Use
