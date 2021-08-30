@@ -16,7 +16,7 @@ const Nav = (props) => {
         setIsOpen((state) => !state)
     };
     
-    const mobileClose = () => {
+    const clickClose = () => {
         setIsOpen(false)
     }
     const handleProduct = () => {
@@ -104,7 +104,7 @@ const Nav = (props) => {
                              className='py-4 px-0'
                              activeClass={"text-black underline"}
                              hoverClass={"hover:text-blue-500"}
-                             onclick={mobileClose}
+                             onclick={clickClose}
                     />
                     
                     <ul >
@@ -121,7 +121,7 @@ const Nav = (props) => {
                                                      className='py-4 px-0'
                                                      activeClass={"text-black underline"}
                                                      hoverClass={"hover:text-blue-500"}
-                                                     onclick={mobileClose}
+                                                     onclick={clickClose}
                                             />
                                         </li>
                                     )
@@ -144,7 +144,7 @@ const Nav = (props) => {
                                                      className='py-4 px-0'
                                                      activeClass={"text-black underline"}
                                                      hoverClass={"hover:text-blue-500"}
-                                                     onclick={mobileClose}
+                                                     onclick={clickClose}
                                             />
                                         </li>
                                     )
@@ -159,7 +159,7 @@ const Nav = (props) => {
                              className='py-4 px-0'
                              activeClass={"text-black underline"}
                              hoverClass={"hover:text-blue-500"}
-                             onclick={mobileClose}
+                             onclick={clickClose}
                     />
 
                     <NavLink href={"/#contact"}
@@ -168,7 +168,7 @@ const Nav = (props) => {
                              className='py-4 px-0'
                              activeClass={"text-black underline"}
                              hoverClass={"hover:text-blue-500"}
-                             onclick={mobileClose}
+                             onclick={clickClose}
                     />
 
                 </nav>
