@@ -198,7 +198,7 @@ const OptidriveE3 = (props) => {
                             <div className='h1 font-bold text-indigo-500'>
                                 Applications include:
                             </div>
-                            <ul className='text-gray-400  md:w-40 lg:w-64'>
+                            <ul className='text-gray-400 md:w-40 lg:w-64 list-disc list-inside '>
                                 <li>Conveyors</li>
                                 <li>Mixers</li>
                                 <li>Treadmills</li>
@@ -208,7 +208,7 @@ const OptidriveE3 = (props) => {
                             <div className='h1 font-bold text-indigo-500 pt-6 md:pt-0'>
                                 Applications include:
                             </div>
-                            <ul className='text-gray-400  md:w-40 lg:w-64'>
+                            <ul className='text-gray-400 md:w-40 lg:w-64 list-disc list-inside'>
                                 <li>Dosing Pumps</li>
                                 <li>Borehole Pumps</li>
                                 <li>Transfer Pumps</li>
@@ -221,7 +221,7 @@ const OptidriveE3 = (props) => {
                             <div className='h1 font-bold text-indigo-500 pt-6 md:pt-0'>
                                 Applications include:
                             </div>
-                            <ul className='text-gray-400  md:w-40 lg:w-64'>
+                            <ul className='text-gray-400 md:w-40 lg:w-64 list-disc list-inside'>
                                 <li>Air Handling Units</li>
                                 <li>Ventilation Fans</li>
                                 <li>Circulating Fans</li>
