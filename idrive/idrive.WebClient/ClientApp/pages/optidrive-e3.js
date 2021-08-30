@@ -1,12 +1,13 @@
 import React, {} from 'react';
 import Nav from '../components/nav'
 import Footer from "../components/footer";
+import ScrollToTop from "../components/ScrollToTop";
 
 const OptidriveE3 = (props) => {
     return (
         <>
             <Nav />
-            <div className='mt-24 md:mt-32 px-5 md:flex lg:container lg:mx-auto '>
+            <div className='mt-24 md:mt-32 px-5 md:flex lg:container lg:mx-auto xl:mt-40'>
                 <div className='md:w-1/2'>
                     <img src='./images/optidrive e3ac95.png' alt='optidrive logo' />
                     <div>
@@ -264,9 +265,9 @@ const OptidriveE3 = (props) => {
 
             <div className='w-auto bg-black h-px md:mx-32 lg:container lg:mx-auto ' />
             
-            <div className='lg:container lg:mx-auto'>
-                <div className='flex flex-col'>
-                    <div className='px-7 mt-12 mb-12'>
+            <div className='lg:container lg:mx-auto mt-12 mb-12'>
+                <div className='flex flex-col md:flex-row'>
+                    <div className='px-7 mt-12 mb-12 md:w-1/2 '>
                         <div className=''>
                             <div className='text-indigo-500 font-bold'>
                                 Dust-Tight Design
@@ -298,16 +299,19 @@ const OptidriveE3 = (props) => {
                             </p>
                         </div>
                     </div>
-                    <div className='flex justify-end w-screen relative'>
-                        <div className='absolute top-8 left-6 w-56'>Local Speed Potentiometer</div>
-                        <div className='absolute top-16 left-6 pt-3 w-56'>Run Reverse/ Off/ Run Forward Switch</div>
-                        <div className='absolute top-32 left-6 pt-3 w-56'>Lockabe Mains Disconnect/ Isolator</div>
-                        <img src='./images/ip66-switched.png' alt='ip66 switched' />
+                    <div className='md:w-1/2'>
+                        <div className='flex justify-end w-screen relative md:w-full'>
+                            <div className='absolute top-8 w-7/12 left-0 xl:left-40 text-right w-56 '>Local Speed Potentiometer</div>
+                            <div className='absolute top-16 w-7/12 left-0 xl:left-40 text-right pt-3 w-56 '>Run Reverse/ Off/ Run Forward Switch</div>
+                            <div className='absolute top-32 w-7/12 left-0 xl:left-40 text-right pt-3 w-56 '>Lockabe Mains Disconnect/ Isolator</div>
+                            <img src='./images/ip66-switched.png' alt='ip66 switched' />
+                        </div>
                     </div>
                 </div>
             </div>
             
             <Footer />
+            <ScrollToTop />
         </>
     );
 }
