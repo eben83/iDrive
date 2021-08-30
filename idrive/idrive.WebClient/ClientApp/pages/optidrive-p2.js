@@ -323,7 +323,7 @@ const OptidriveP2 = (props) => {
                     <p className='text-gray-500 pt-6 md:pt-0'>
                         A wide range of function types available including:
                     </p>
-                    <ul className='list-disc inner-list text-gray-500'>
+                    <ul className='list-disc list-inside text-gray-500'>
                         <li>
                             Programmable logic functions
                         </li>
