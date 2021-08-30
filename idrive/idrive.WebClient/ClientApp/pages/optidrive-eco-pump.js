@@ -59,7 +59,7 @@ const OptidriveEcoPump = (props) => {
                         (BLDC) Motors & Synchronous Reluctance (SynRM) Motors
                     </p>
                     
-                    <img src='./images/hvac-eco-features.jpg' alt='features' />
+                    <img src='./images/hvac-eco-features.jpg' alt='features' className='mx-auto' />
                     
                     <p className='text-gray-500 pt-6 pb-6'>
                         <span className='font-bold'>Optidrive Eco Variable Frequency Drives</span> provide efficient, reliable and quiet control of motors for HVAC and pumping applications. Designed to provide maximum operating efficiency whilst minimising environmental impact, Optidrive Eco offers unrivalled performance and flexibility, whilst meeting the key standards and requirements of demanding applications.
@@ -115,21 +115,21 @@ const OptidriveEcoPump = (props) => {
                 </div>
             </div>
             
-            <div className=' px-5 pt-12 pb-12 text-center flex flex-col md:flex-row lg:container lg:mx-auto'>
+            <div className=' px-5 md:px-8 pt-12 pb-12 text-center md:text-left text-gray-500 flex flex-col md:flex-row lg:container lg:mx-auto'>
                 <div className='md:w-1/3'>
                     <div className='md:flex md:flex-row justify-evenly'>
                         <div className='flex flex-col items-center md:w-1/2 p-2'>
                             <Link className='' href='/'>
                                 <a>
                                     <div className='text-indigo-500 font-bold pb-6'>Multiple Pump Copntrol</div>
-                                    <img src='/images/optiflow-logo.jpg' alt='optiflow logo' />
+                                    <img src='/images/optiflow-logo.jpg' alt='optiflow logo' className='mx-auto' />
                                 </a>
                             </Link>
                             <p className='pt-6'>Embedded control technology for multiple pump systems.</p>
                         </div>
                         <div className='flex flex-col items-center md:w-1/2 p-2'>
                             <div className='text-indigo-500 font-bold pt-6 md:pt-0 pb-6'>BACnet Interface</div>
-                            <img src='/images/bacnet-logo.jpg' alt='optiflow logo' />
+                            <img src='/images/bacnet-logo.jpg' alt='obacnet logo' />
                         </div>
                     </div >
                     <div className='pt-6' >
@@ -180,7 +180,7 @@ const OptidriveEcoPump = (props) => {
             <div className='bg-gray-600'>
                 <div className='pt-12 pb-12 mt-12 mb-24 px-6 text-center  md:flex md:pt-2 md:pb-2 md:text-left md:relative md:h-48 lg:container lg:mx-auto'>
                     <img src='./images/intuitive-keypad-controla6e4.png' alt='thumb image' className='md:w-80 h-auto mx-auto md:absolute md:-top-12' />
-                    <div className='text-white md:absolute md:right-96 '>
+                    <div className='text-white md:absolute md:right-3 xl:right-96 '>
                         <div className='font-bold'>OLED Display</div>
                         <p>
                             Installed as standard on all models
