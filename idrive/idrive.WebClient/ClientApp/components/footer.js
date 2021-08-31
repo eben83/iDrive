@@ -6,7 +6,7 @@ const Footer = (props) => {
     return (
         <>
             <footer>
-                <div className='relative w-full bg-gray-400 h-2 z-40' />
+                <div className=' w-full bg-gray-400 h-2 z-20' />
                 <div className='flex w-full justify-center items-center h-auto py-12 md:pt-0 md:h-52 bg-indigo-500'>
                     <div className='h-auto flex flex-col md:flex-row justify-evenly items-center h-auto' >
                         <a href='https://www.invertekdrives.com/'>
