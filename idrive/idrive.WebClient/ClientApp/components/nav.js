@@ -78,7 +78,7 @@ const Nav = (props) => {
     ]
     
     const sectors = [
-        {id: '1', title: 'Pump Control', path: '/'},
+        {id: '1', title: 'Pump Control', path: '/pump-control'},
         {id: '2', title: 'Building Services', path: '/'},
         {id: '3', title: 'Elevators', path: '/'},
         {id: '4', title: 'General Automation', path: '/'},
