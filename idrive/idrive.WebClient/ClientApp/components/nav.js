@@ -74,7 +74,7 @@ const Nav = (props) => {
         {id: '3', title: 'Optidrive Eco Pump', path: '/optidrive-eco-pump'},
         {id: '4', title: 'Optidrive Eco', path: '/optidrive-eco'},
         {id: '5', title: 'Optidrive Elevator', path: '/optidrive-elevator'},
-        {id: '6', title: 'Optidrive P2 Solar', path: '/'},
+        {id: '6', title: 'Optidrive P2 Solar', path: '/optidrive-solar-pump'},
     ]
     
     const sectors = [
