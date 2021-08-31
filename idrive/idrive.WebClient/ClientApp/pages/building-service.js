@@ -14,7 +14,7 @@ const BuildingService = (props) => {
 
             <div className='-mt-32 relative'>
                 <div className='bg-green-600 text-white px-6 py-12'>
-                    <div className='text-2xl flex items-center justify-center'>
+                    <div className='text-2xl '>
                         <p>Building Services</p>
                     </div>
                     <p>
