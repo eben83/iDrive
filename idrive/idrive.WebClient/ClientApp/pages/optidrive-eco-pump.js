@@ -88,6 +88,9 @@ const OptidriveEcoPump = (props) => {
                 
                 <div className='pt-12 lg:w-1/2 md:p-3 lg:pl-32 text-gray-500'>
                     <img src='./images/pump-control.png' alt='Pump control' className='w-full lg:w-96 '/>
+                    <Link href='/'>
+                        <h1 className='text-indigo-500 font-bold text-xl pt-6 cursor-pointer'>Pump Control</h1>
+                    </Link>
                     <ul className='list-disc inside-list pt-12 lg:text-left'>
                         <li>Optiflow multiple pump control</li>
                         <li>Blockage detect/clear</li>
@@ -96,7 +99,9 @@ const OptidriveEcoPump = (props) => {
                         <li>Drive controlled bypass</li>
                         <li>Flexible pump station control with no PLCs or pump control units</li>
                     </ul>
-                    <div className='btn btn-primary'>[Read More]</div>
+                    <Link href='/'>
+                        <div className='btn btn-primary cursor-pointer'>[Read More]</div>
+                    </Link>
                 </div>
             </div>
 
@@ -122,7 +127,9 @@ const OptidriveEcoPump = (props) => {
                             <Link className='' href='/'>
                                 <a>
                                     <div className='text-indigo-500 font-bold pb-6'>Multiple Pump Copntrol</div>
-                                    <img src='/images/optiflow-logo.jpg' alt='optiflow logo' className='mx-auto' />
+                                    <Link href='/'>
+                                        <img src='/images/optiflow-logo.jpg' alt='optiflow logo' className='mx-auto cursor-pointer' />
+                                    </Link>
                                 </a>
                             </Link>
                             <p className='pt-6'>Embedded control technology for multiple pump systems.</p>
@@ -166,9 +173,11 @@ const OptidriveEcoPump = (props) => {
                             <li>Pump Prime with Burst Pipe Detection</li>
                             <li>Drive Controlled Bypass</li>
                         </ul>
-                        <button className='bg-indigo-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded uppercase mt-6'>
-                            Pump Drive Features
-                        </button>
+                        <Link href='/'>
+                            <button className='bg-indigo-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded uppercase mt-6'>
+                                Pump Drive Features
+                            </button>
+                        </Link>
                     </div>
 
                 </div>

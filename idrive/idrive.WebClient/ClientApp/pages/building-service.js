@@ -2,6 +2,7 @@
 import Nav from '../components/nav'
 import Footer from '../components/footer'
 import ScrollToTop from "../components/scrollToTop"
+import Link from 'next/link'
 
 
 const BuildingService = (props) => {
@@ -22,11 +23,13 @@ const BuildingService = (props) => {
                     </p>
                     
                 </div>
-                <div className='h-40 w-80 bg-white absolute top-0 right-32 flex justify-center items-center'>
-                    <div className='w-auto h-auto text-3xl'>
-                        Building Automation
+                <Link href='/'>
+                    <div className='h-40 w-80 bg-white absolute top-0 right-32 flex justify-center items-center cursor-pointer'>
+                        <div className='w-auto h-auto text-3xl'>
+                            Building Automation
+                        </div>
                     </div>
-                </div>
+                </Link>
             </div>
 
             <div className='px-6 text-gray-500 mt-12 mb-12 md:flex lg:container lg:mx-auto'>
@@ -72,9 +75,11 @@ const BuildingService = (props) => {
 
                 </div>
                 <div className='md:w-1/2'>
-                    <div className='text-2xl pt-6 text-indigo-500'>
-                        Avoid Pump DowntimeBuilding Safety Systems
-                    </div>
+                    <Link href='/'>
+                        <div className='text-2xl pt-6 text-indigo-500 cursor-pointer'>
+                            Building Safty Systems
+                        </div>
+                    </Link>
                     <p>
                         Building services require a range of specific drive features to ensure that safe and comfortable
                         environments can be maintained in a reliable and cost effective manner.

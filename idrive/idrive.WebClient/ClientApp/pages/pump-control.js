@@ -2,6 +2,7 @@
 import Nav from '../components/nav'
 import Footer from '../components/footer'
 import ScrollToTop from "../components/scrollToTop"
+import Link from 'next/link'
 
 const PumpControl = (props) => {
     return (
@@ -55,9 +56,11 @@ const PumpControl = (props) => {
 
                 </div>
                 <div className='md:w-1/2'>
-                    <div className='text-2xl pt-6 text-indigo-500'>
-                        Avoid Pump Downtime
-                    </div>
+                    <Link href='/'>
+                        <div className='text-2xl pt-6 text-indigo-500 cursor-pointer'>
+                            Avoid Pump Downtime
+                        </div>
+                    </Link>
                     <p>
                         Flexible and efficient pump control across single and multiple pump configurations requires
                         a wide range of dedicated features in a variable speed drive.

@@ -2,6 +2,7 @@
 import Nav from '../components/nav'
 import Footer from '../components/footer'
 import ScrollToTop from "../components/scrollToTop"
+import Link from 'next/link'
 
 const Elevators = (props) => {
     return (
@@ -43,8 +44,12 @@ const Elevators = (props) => {
                         <li>Rescue Mode Operation</li>
                         <li>Elevator Specific Parameter Set</li>
                     </ul>
-
-
+                    
+                    <Link href='/'>
+                        <div className='text-indigo-500 font-bold text-xl pt-6 cursor-pointer'>
+                            Compact Elevator Drive
+                        </div>
+                    </Link>
                 </div>
 
                 <div className='px-6 text-gray-500 mb-12 md:w-1/2  '>
