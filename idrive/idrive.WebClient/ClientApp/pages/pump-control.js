@@ -7,7 +7,7 @@ const PumpControl = (props) => {
     return (
         <>
             <Nav />
-            <div className='w-screen h-screen bg-fixed bg-left bg-top md:bg-center'
+            <div className='w-screen h-screen bg-fixed bg-left bg-top md:bg-center bg-no-repeat bg-cover'
                  style={{backgroundImage: "url( "+ "/images/cover-1496178224.jpg" +" )"}}>
             </div>
             
@@ -52,7 +52,7 @@ const PumpControl = (props) => {
                         <li>Pump blockage Detect / Clear</li>
                         <li>Broken pipe detection</li>
                     </ul>
-                    
+
                 </div>
                 <div className='md:w-1/2'>
                     <div className='text-2xl pt-6 text-indigo-500'>
