@@ -83,7 +83,7 @@ const Nav = (props) => {
         {id: '3', title: 'Elevators', path: '/elevators'},
         {id: '4', title: 'General Automation', path: '/general-automation'},
         {id: '5', title: 'Marine Equipment Control', path: '/marine-equipment-control'},
-        {id: '6', title: 'Combustion Air Fan Control', path: '/'},
+        {id: '6', title: 'Combustion Air Fan Control', path: '/combustion-air-fan-control'},
         {id: '7', title: 'Solar', path: '/'},
     ]
     
