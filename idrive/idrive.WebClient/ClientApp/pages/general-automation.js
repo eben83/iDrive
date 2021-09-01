@@ -51,7 +51,7 @@ const GenaralAutomation = (props) => {
                             <p className='text-gray-500'>
                                 General purpose variable speed frequency drive, dedicated to low power applications.
                             </p>
-                            <ul className='list-disc pt-6'>
+                            <ul className='list-disc pt-6 text-gray-500'>
                                 <li>Integral RFI filter</li>
                                 <li>Compact IP20 & IP66 enclosures</li>
                             </ul>
