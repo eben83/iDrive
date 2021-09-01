@@ -20,7 +20,7 @@ const MarineEquipmentControl = (props) => {
                         </p>
                     </div>
                 </div>
-                <div className='h-40 w-80 absolute top-0 right-32 flex justify-center items-center cursor-pointer invisible md:visible'>
+                <div className='h-40 w-80 absolute top-0 right-12 lg:right-32 flex justify-center items-center cursor-pointer invisible md:visible'>
                     <div className='w-auto h-auto text-3xl -mt-32'>
                         <img src='/images/various combined.png' alt='various combined' />
                     </div>
