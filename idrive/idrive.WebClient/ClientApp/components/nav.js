@@ -82,7 +82,7 @@ const Nav = (props) => {
         {id: '2', title: 'Building Services', path: '/building-service'},
         {id: '3', title: 'Elevators', path: '/elevators'},
         {id: '4', title: 'General Automation', path: '/general-automation'},
-        {id: '5', title: 'Marine Equipment Control', path: '/'},
+        {id: '5', title: 'Marine Equipment Control', path: '/marine-equipment-control'},
         {id: '6', title: 'Combustion Air Fan Control', path: '/'},
         {id: '7', title: 'Solar', path: '/'},
     ]
@@ -96,7 +96,12 @@ const Nav = (props) => {
                 <button className="md:hidden" onClick={toggleNav}>
                     <FontAwesomeIcon icon={isOpen ? faTimes : faBars} className='h-7 w-7 text-indigo-500 absolute right-3 top-5'/>
                 </button>
-                <nav className={`${isOpen ? 'flex' : 'hidden'} z-100 text-white bg-indigo-500 h-screen md:h-auto md:pb-0 md:bg-white md:text-indigo-500 pl-5 absolute md:pl-0  md:relative top-24 left-0 md:top-0 z-100 flex-col md:flex md:flex-row md:justify-evenly w-full `}>
+                
+                <nav className={`${isOpen ? 'flex' : 'hidden'} z-100 text-white bg-indigo-500 h-screen md:h-auto md:pb-0 md:bg-white md:text-indigo-500 pl-5 absolute md:pl-0  md:relative top-0 left-0 md:top-0 z-100 flex-col md:flex md:flex-row md:justify-evenly w-full `}>
+
+                    <button className="md:hidden" onClick={toggleNav}>
+                        <FontAwesomeIcon icon={isOpen ? faTimes : faBars} className='h-7 w-7 text-white absolute right-3 top-5'/>
+                    </button>
 
                     <NavLink href={"/"}
                              isActive={router.pathname === "/"}
